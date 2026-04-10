@@ -46,9 +46,9 @@
   --titlebar-bg: #f0eee9;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.1);
-  --shadow-hero: 0 40px 120px rgba(74, 124, 89, 0.14),
-    0 12px 48px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.1);
+  --shadow-hero: 0 20px 60px rgba(74, 124, 89, 0.14),
+    0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 [data-theme="dark"] {
@@ -67,9 +67,9 @@
   --titlebar-bg: #0f0f0f;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.55);
-  --shadow-hero: 0 40px 120px rgba(94, 158, 116, 0.18),
-    0 12px 48px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.55);
+  --shadow-hero: 0 20px 60px rgba(94, 158, 116, 0.18),
+    0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
 /* ── Reset ── */
@@ -172,9 +172,10 @@ h3 {
   align-items: center;
   gap: 24px;
   padding: 14px 32px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: saturate(180%) blur(14px);
-  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  /* Solid (96%) background instead of backdrop-filter blur.
+     backdrop-filter on a sticky header caused progressive GPU memory
+     buildup in Chrome on long pages, eventually crashing the tab. */
+  background: color-mix(in srgb, var(--bg) 96%, transparent);
   border-bottom: 1px solid var(--border);
   transition: background var(--transition-slow),
     border-color var(--transition-slow);
@@ -344,17 +345,18 @@ h3 {
     box-shadow var(--transition-slow);
 }
 
-/* Subtle floating glow behind the hero image */
+/* Subtle floating glow behind the hero image.
+   Uses only a radial-gradient — no filter: blur(), which was causing a
+   large GPU compositor layer and tab crashes in Chrome. */
 .hero-visual::before {
   content: "";
   position: absolute;
-  inset: -40px;
+  inset: -10px;
   background: radial-gradient(
     ellipse at center,
     var(--accent-soft) 0%,
-    transparent 70%
+    transparent 65%
   );
-  filter: blur(40px);
   z-index: -1;
   pointer-events: none;
   transition: background var(--transition-slow);
