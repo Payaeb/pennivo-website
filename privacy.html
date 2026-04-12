@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Privacy Policy — Pennivo</title>
+    <meta
+      name="description"
+      content="Pennivo privacy policy. No data collection, no tracking, no accounts. Your files stay on your device."
+    />
+
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/assets/logo-256.png" />
+
+    <link rel="stylesheet" href="/styles.css" />
+
+    <!-- Apply saved theme before paint to avoid flash -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('pennivo-theme');
+          if (saved === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="sr-only" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Pennivo home">
+        <img src="/assets/logo.png" alt="" width="32" height="32" class="brand-logo" />
+        <span class="brand-name">Pennivo</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="/#features">Features</a>
+        <a href="/#download">Download</a>
+        <a
+          href="https://github.com/Payaeb/pennivo"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHub</a
+        >
+      </nav>
+
+      <button
+        id="theme-toggle"
+        class="theme-toggle"
+        type="button"
+        aria-label="Toggle theme"
+        title="Toggle theme"
+      >
+        <svg
+          viewBox="0 0 16 16"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.7"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <circle cx="8" cy="8" r="3" />
+          <line x1="8" y1="1.5" x2="8" y2="3" />
+          <line x1="8" y1="13" x2="8" y2="14.5" />
+          <line x1="1.5" y1="8" x2="3" y2="8" />
+          <line x1="13" y1="8" x2="14.5" y2="8" />
+          <line x1="3.5" y1="3.5" x2="4.5" y2="4.5" />
+          <line x1="11.5" y1="11.5" x2="12.5" y2="12.5" />
+          <line x1="12.5" y1="3.5" x2="11.5" y2="4.5" />
+          <line x1="4.5" y1="11.5" x2="3.5" y2="12.5" />
+        </svg>
+      </button>
+    </header>
+
+    <main id="main">
+      <article class="legal-page">
+        <header class="legal-header">
+          <h1>Privacy Policy</h1>
+          <p class="legal-updated">Last updated: April 11, 2026</p>
+        </header>
+
+        <div class="legal-body">
+          <p class="legal-intro">
+            Pennivo is built on a simple principle: your writing belongs to you.
+            We collect as little data as technically possible, and in most cases,
+            none at all.
+          </p>
+
+          <!-- Desktop App -->
+          <section class="legal-section">
+            <h2>Desktop App (Windows)</h2>
+            <p>
+              The Pennivo desktop app runs entirely on your local machine.
+              There are no accounts, no analytics, no telemetry, and no crash
+              reporting.
+            </p>
+            <ul>
+              <li><strong>No data collection.</strong> The app does not send any personal data, usage data, or file contents to any server.</li>
+              <li><strong>All files stay local.</strong> Your documents are stored as plain <code>.md</code> files on your own disk. Pennivo never uploads, syncs, or transmits them.</li>
+              <li><strong>No account required.</strong> There is no sign-up, no login, and no user profile.</li>
+              <li><strong>No analytics or telemetry.</strong> The app does not track how you use it, what you write, or how often you open it.</li>
+              <li><strong>Auto-update checks.</strong> The only network request the app makes is checking the <a href="https://docs.github.com/en/rest/releases" target="_blank" rel="noopener noreferrer">GitHub Releases API</a> for new versions. This request contains no personal information.</li>
+            </ul>
+          </section>
+
+          <!-- Android App -->
+          <section class="legal-section">
+            <h2>Android App</h2>
+            <p>
+              The Android version of Pennivo follows the same offline-first
+              approach as the desktop app.
+            </p>
+            <ul>
+              <li><strong>No data sent to any server.</strong> All editing happens on-device. No file contents, metadata, or usage information leaves your phone or tablet.</li>
+              <li><strong>Local storage only.</strong> Files are stored in the app-specific directory on your device. Settings are stored locally using Capacitor Preferences.</li>
+              <li><strong>No third-party SDKs.</strong> Pennivo does not include any analytics, advertising, or data-collection SDKs.</li>
+              <li><strong>Permissions.</strong> The app may request camera and storage permissions solely for inserting images into your documents. These permissions are never used for any other purpose.</li>
+              <li><strong>No account required.</strong> Same as desktop &mdash; no sign-up, no login, no profile.</li>
+            </ul>
+          </section>
+
+          <!-- Website -->
+          <section class="legal-section">
+            <h2>Website (pennivo.app)</h2>
+            <p>
+              The Pennivo website is a static site hosted on
+              <a href="https://www.cloudflare.com/" target="_blank" rel="noopener noreferrer">Cloudflare Pages</a>.
+            </p>
+            <ul>
+              <li><strong>Cloudflare Web Analytics.</strong> We use <a href="https://www.cloudflare.com/web-analytics/" target="_blank" rel="noopener noreferrer">Cloudflare Web Analytics</a>, a privacy-focused analytics service that does not use cookies, does not collect personally identifiable information, and does not track visitors across sites.</li>
+              <li><strong>No user accounts or forms.</strong> The website does not collect any personal information. There are no forms, no sign-ups, and no comment sections.</li>
+              <li><strong>Standard server logs.</strong> As with any website, Cloudflare&rsquo;s CDN may log IP addresses and request metadata in standard server logs. This is standard web hosting infrastructure and is governed by <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare&rsquo;s own privacy policy</a>.</li>
+              <li><strong>Theme preference.</strong> Your light/dark theme choice is saved in your browser&rsquo;s <code>localStorage</code>. This data never leaves your browser.</li>
+            </ul>
+          </section>
+
+          <!-- Cookies -->
+          <section class="legal-section">
+            <h2>Cookies</h2>
+            <p>
+              Pennivo does not set any cookies. Cloudflare may set standard
+              security cookies (such as <code>__cfruid</code>) as part of its
+              CDN and DDoS protection services. These are strictly functional
+              and are not used for tracking or advertising.
+            </p>
+          </section>
+
+          <!-- Third Parties -->
+          <section class="legal-section">
+            <h2>Third-Party Data Sharing</h2>
+            <p>
+              We do not share, sell, rent, or trade any user data with third
+              parties. There is no advertising in any Pennivo product.
+            </p>
+          </section>
+
+          <!-- Open Source -->
+          <section class="legal-section">
+            <h2>Open Source</h2>
+            <p>
+              Pennivo is open-source software licensed under the
+              <a href="https://github.com/Payaeb/pennivo/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a>.
+              You can inspect the full source code on
+              <a href="https://github.com/Payaeb/pennivo" target="_blank" rel="noopener noreferrer">GitHub</a>
+              to verify every claim in this policy.
+            </p>
+          </section>
+
+          <!-- Changes -->
+          <section class="legal-section">
+            <h2>Changes to This Policy</h2>
+            <p>
+              If this policy is ever updated, the changes will be posted on
+              this page with an updated date. Because Pennivo collects
+              essentially no data, meaningful changes are unlikely.
+            </p>
+          </section>
+
+          <!-- Contact -->
+          <section class="legal-section">
+            <h2>Contact</h2>
+            <p>
+              If you have questions about this privacy policy, please open an
+              issue on our
+              <a href="https://github.com/Payaeb/pennivo/issues" target="_blank" rel="noopener noreferrer">GitHub issue tracker</a>.
+            </p>
+          </section>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="/assets/logo.png" alt="" width="24" height="24" />
+          <span>Pennivo</span>
+        </div>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="/#features">Features</a>
+          <a href="/#download">Download</a>
+          <a
+            href="https://github.com/Payaeb/pennivo"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+          <a
+            href="https://github.com/Payaeb/pennivo/issues"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Report a bug</a
+          >
+          <a
+            href="https://github.com/Payaeb/pennivo/blob/main/LICENSE"
+            target="_blank"
+            rel="noopener noreferrer"
+            >MIT License</a
+          >
+          <a href="/privacy">Privacy</a>
+        </nav>
+        <p class="footer-copy">&copy; 2026 Paya Ebrahimi</p>
+      </div>
+    </footer>
+
+    <script src="/script.js" defer></script>
+
+    <!-- Cloudflare Web Analytics -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "16e47751100d4564b3f9450b5c92f750"}'></script>
+    <!-- End Cloudflare Web Analytics -->
+  </body>
+</html>

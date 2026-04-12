@@ -843,6 +843,138 @@ h3 {
 }
 
 /* ══════════════════════════════════════════
+   Legal pages (Privacy, Terms, etc.)
+   ══════════════════════════════════════════ */
+
+.legal-page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 72px var(--gutter) 96px;
+}
+
+.legal-header {
+  margin-bottom: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.legal-header h1 {
+  font-size: clamp(32px, 5vw, 44px);
+  margin: 0 0 12px;
+}
+
+.legal-updated {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.legal-intro {
+  font-size: 19px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin: 0 0 48px;
+}
+
+.legal-body {
+  font-size: var(--text-base);
+  line-height: 1.7;
+}
+
+.legal-section {
+  margin-bottom: 44px;
+}
+
+.legal-section:last-child {
+  margin-bottom: 0;
+}
+
+.legal-section h2 {
+  font-size: 24px;
+  margin: 0 0 14px;
+  padding-left: 16px;
+  position: relative;
+}
+
+.legal-section h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  bottom: 5px;
+  width: 3px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+.legal-section p {
+  margin: 0 0 16px;
+  color: var(--text-primary);
+}
+
+.legal-section ul {
+  margin: 0 0 16px;
+  padding-left: 24px;
+  list-style: none;
+}
+
+.legal-section ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.legal-section ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.legal-section ul li:last-child {
+  margin-bottom: 0;
+}
+
+.legal-section a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-soft);
+  text-underline-offset: 3px;
+  transition: text-decoration-color var(--transition-base),
+    color var(--transition-base);
+}
+
+.legal-section a:hover {
+  text-decoration-color: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .legal-page {
+    padding: 48px 20px 72px;
+  }
+
+  .legal-header {
+    margin-bottom: 36px;
+    padding-bottom: 24px;
+  }
+
+  .legal-intro {
+    font-size: 17px;
+    margin-bottom: 36px;
+  }
+
+  .legal-section {
+    margin-bottom: 36px;
+  }
+}
+
+/* ══════════════════════════════════════════
    Scroll reveal
    ══════════════════════════════════════════ */
 
