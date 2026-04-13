@@ -34,8 +34,13 @@ Then visit http://localhost:8000.
 ├── styles.css          # All styles (light + dark via data-theme)
 ├── script.js           # Theme toggle + GitHub Releases fetcher
 ├── assets/
-│   ├── logo.png        # 512px Pennivo logo
-│   ├── favicon.ico
+│   ├── logo.svg        # Master Pennivo icon (vector)
+│   ├── logo.png        # 512px raster fallback
+│   ├── logo-256.png    # 256px raster fallback
+│   ├── favicon.svg     # Same master, served to modern browsers
+│   ├── favicon.ico     # Multi-resolution legacy favicon
+│   ├── favicon-16.png  # 16/32/192/512 raster sizes
+│   ├── apple-touch-icon.png  # 180px iOS home-screen icon
 │   └── screenshots/    # App screenshots used on the page
 └── _headers            # Cloudflare Pages cache headers
 ```
